@@ -10,6 +10,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.compose.rememberNavController
 import com.rizmaulana.movieapp.navigation.SetupNavHost
 import com.rizmaulana.movieapp.screens.SplashScreen
@@ -23,8 +24,9 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             MovieAppTheme {
-                var navController = rememberNavController()
-                SetupNavHost(navController = navController)
+                val navController = rememberNavController()
+                val viewModel = hiltViewModel<MainViewModel>()
+                SetupNavHost(navController = navController, viewModel = viewModel)
             }
         }
     }
