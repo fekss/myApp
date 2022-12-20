@@ -15,7 +15,9 @@ import com.rizmaulana.movieapp.navigation.SetupNavHost
 import com.rizmaulana.movieapp.screens.SplashScreen
 
 import com.rizmaulana.movieapp.ui.theme.MovieAppTheme
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

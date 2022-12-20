@@ -48,7 +48,7 @@ fun Splash(alpha: Float) {
     ) {
         Icon(
             modifier = Modifier
-                .size(120.dp)
+                .size(150.dp)
                 .alpha(alpha = alpha),
             imageVector = Icons.Default.PlayArrow,
             contentDescription = "",
